@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Client.Application</name>
+    </assembly>
+    <members>
+        <member name="T:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork">
+            <summary>
+            Единица работы сервисов для взаимодействия с API Неосинтез
+            </summary>
+        </member>
+        <member name="M:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.#ctor(Client.Domain.Contracts.WebApi.IWebRequestService)">
+            <summary>
+            Единица работы сервисов для взаимодействия с API Неосинтез
+            </summary>
+            <param name="webRequestService">Экземпляр сервиса работы с HTTP</param>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.AttributeStructure">
+            <summary>
+            Сервис взаимодействия с API структуры атрибутов Неосинтез
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.ObjectCollections">
+            <summary>
+            Сервис взаимодействия с API коллекций объектов
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.ObjectSearchApi">
+            <summary>
+            Сервис взаимодействия с API поиска в Неосинтез
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.ObjectWorkApi">
+            <summary>
+            Сервис взаимодействия с API объектов в Неосинтез
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.StructureApi">
+            <summary>
+            Сервис взаимодействия с API структуры метаданных Неосинтез
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.ModelsElementApi">
+            <summary>
+            Сервис взаимодействия с API с моделями в Неосинтез
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.ContentApiService">
+            <summary>
+            Сервис взаимодействия с API загрузки файлов
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.ElementsApiService">
+            <summary>
+            Сервис взаимодействия с API элементов моделей
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.RolesService">
+            <summary>
+            Сервис взаимодействия с ролями
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.SecurityUserService">
+            <summary>
+            Сервис взаимодействия с методами работы с пользователем
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezApiServices.ApiServiceUnitOfWork.PrincipalsApiService">
+            <summary>
+            Сервис взаимодействия с методами работы с principals
+            </summary>
+        </member>
+        <member name="M:Client.Application.Services.NeosyntezUserServices.UserModelService.DeleteUpdateObjectAsync">
+            <summary>
+            Метод удаления объекта загрузки в Неосинтез
+            </summary>
+        </member>
+        <member name="M:Client.Application.Services.NeosyntezUserServices.UserModelService.UploadConditionCheckAsync(System.Func{System.Collections.Generic.IEnumerable{Client.Domain.Models.WorkObjects.Objects.UploadObject},System.Boolean},System.Func{System.Collections.Generic.IEnumerable{Client.Domain.Models.WorkObjects.Objects.UploadObject},System.Boolean})">
+            <summary>
+            Метод обработки продолжительных операций связанных с загрузкой файла в Неосинтез
+            </summary>
+            <param name="conditionPredicate">Предикат для блока условия при котором начинается обработка длительной операции</param>
+            <param name="whilePredicate">Предикат для блока обработки длительной операции</param>
+            <returns>Список объектов загрузки</returns>
+        </member>
+        <member name="M:Client.Application.Services.NeosyntezUserServices.UserModelService.GetNeosyntezChildObject(System.Int64,System.Collections.Generic.IEnumerable{Client.Domain.Models.NeosyntezObjects.NeosyntezModel})">
+            <summary>
+            Обслуживающий метод поиска объекта модели в результате выборки из Неосинтез
+            </summary>
+            <param name="modelId">Id модели поиск которой производится</param>
+            <param name="childObjects">Коллекция Child-элементов моделей Неосинтез</param>
+            <returns>Объект модели Неосинтез или Null в случае ее отсутсвия</returns>
+        </member>
+        <member name="T:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork">
+            <summary>
+            Единица работы для взаимодействия с сервисами пользовательского уровня
+            </summary>
+        </member>
+        <member name="M:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.#ctor(Client.Domain.Contracts.NeoSyntezApi.IApiServiceUnitOfWork)">
+            <summary>
+            Единица работы для взаимодействия с сервисами пользовательского уровня
+            </summary>
+            <param name="apiService">"Экземпляр единицы работы для взаимодействия с API</param>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.UserObjectCollection">
+            <summary>
+            Сервис работы с коллекциями Неосинтез
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.SearchService">
+            <summary>
+            Сервис работы с поиском
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.UserObjectWork">
+            <summary>
+            Сервис работы с объектами Неосинтез
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.UserAttributeStructure">
+            <summary>
+            Сервис работы со структурой атрибутов Неосинтез
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.UserStructure">
+            <summary>
+            Сервис работы со структурой метаданных Неосинтез
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.ModelsService">
+            <summary>
+            Сервис для работы с 3D моделями Неосинтез
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.ElementsService">
+            <summary>
+            Сервис взаимодействия с API Элементов моделей
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.RolesUserService">
+            <summary>
+            Сервис взаимодействия с ролями
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.SecurityUserService">
+            <summary>
+            Сервис взаимодействия с методами работы с пользователем
+            </summary>
+        </member>
+        <member name="P:Client.Application.Services.NeosyntezUserServices.UserServiceUnitOfWork.PrincipalsService">
+            <summary>
+            Сервис взаимодействия с методами работы с principals
+            </summary>
+        </member>
+        <member name="M:Client.Application.WebApi.WebRequestService.#ctor(System.Net.Http.IHttpClientFactory,Client.Domain.Contracts.NeosyntezConfiguration.INeosyntezConfiguration)">
+            <summary>
+            Конструктор cервиса взаимодействия с использованием конфигурации подключения к экземпляру Неосинтез
+            </summary>
+            <param name="httpClientFactory">Фабрика HttpClient</param>
+            <param name="neosyntezConfiguration">Конфигурация подключения к экземпляру Неосинтез</param>
+        </member>
+        <member name="M:Client.Application.WebApi.WebRequestService.#ctor(System.Net.Http.IHttpClientFactory,Client.Domain.Contracts.NeosyntezConfiguration.INeosyntezTokenConfiguration)">
+            <summary>
+            Конструктор cервиса взаимодействия с использованием существующего токена доступа
+            </summary>
+            <param name="httpClientFactory">Фабрика HttpClient</param>
+            <param name="tokenConfiguration">Конфигурация подключения с существующим токеном доступа</param>
+        </member>
+    </members>
+</doc>
